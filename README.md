@@ -209,6 +209,24 @@ serialPort.on("message", function (oscMsg) {
 serialPort.open();
 ```
 
+### Serial in Node.js
+
+#### Connecting to the serial port and listening for OSC messages
+```javascript
+// Instantiate a new OSC Serial Port.
+var serialPort = new osc.SerialPort({
+    devicePath: "/dev/cu.usbmodem22131"
+});
+
+// Listen for the message event and map the OSC message to the synth.
+serialPort.on("message", function (oscMsg) {
+    console.log("An OSC message was received!", oscMsg);
+});
+
+// Open the port.
+serialPort.open();
+```
+
 More code examples showing how osc.js can be used in browser-based, Node.js, and Chrome App applications can be found in the [osc.js examples repository](https://github.com/colinbdclark/osc.js-examples).
 
 The osc.js Low-Level API
