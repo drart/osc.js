@@ -211,7 +211,6 @@ serialPort.open();
 
 ### Serial in Node.js
 
-#### Connecting to the serial port and listening for OSC messages
 ```javascript
 // Instantiate a new OSC Serial Port.
 var serialPort = new osc.SerialPort({
